@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:practice/validator.dart';
 
 class Bloc extends Object with Validator {
-  final _firstInput = StreamController<String>();
-  final _secondInput = StreamController<String>();
-  final _result = StreamController<String>();
+  final _firstInput = StreamController<String>.broadcast();
+  final _secondInput = StreamController<String>.broadcast();
+  final _result = StreamController<String>.broadcast();
 
   double _latestFirstInput = 0;
   double _latestSecondInput = 0;
